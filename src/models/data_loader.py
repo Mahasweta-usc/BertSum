@@ -11,6 +11,7 @@ from others.logging import logger
 class Batch(object):
     def _pad(self, data, pad_id, width=-1):
         if (width == -1):
+            print(d)
             width = max(len(d) for d in data)
         rtn_data = [d + [pad_id] * (width - len(d)) for d in data]
         return rtn_data
